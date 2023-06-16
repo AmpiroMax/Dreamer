@@ -1,0 +1,32 @@
+# Файл CLANG-FORMAT, созданный Visual Studio
+
+BasedOnStyle: Google  
+
+AllowShortFunctionsOnASingleLine: Inline
+
+AllowShortIfStatementsOnASingleLine: false
+
+AllowShortCaseLabelsOnASingleLine: true
+
+AlwaysBreakTemplateDeclarations: true
+
+BreakBeforeBraces: Allman
+
+ColumnLimit: 120
+
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+
+Cpp11BracedListStyle: true
+
+DerivePointerAlignment: false
+
+IndentCaseLabels: true
+
+IndentWidth: 4
+
+AccessModifierOffset: -3 
+
+Standard: Cpp11
+
+
+
