@@ -30,14 +30,29 @@ void Game::initWindow()
     this->window->setVerticalSyncEnabled(vertical_sync_enabled);
 }
 
+void Game::initStates()
+{
+    this->states.push(new GameState(this->window));
+}
+
 // Constructors/Destructors
 
 Game::Game()
 {
     this->initWindow();
+    this->initStates();
 }
 
-Game::~Game() {}
+Game::~Game()
+{
+    delete this->window;
+
+    while (!this->states.empty())
+    {
+        delete this->states.top();
+        this->states.pop();
+    }
+}
 
 // Functions
 
@@ -59,13 +74,17 @@ void Game::updateSFMLEvents()
 void Game::update()
 {
     this->updateSFMLEvents();
+    if (!this->states.empty())
+        this->states.top()->update(this->dt);
 }
 
 void Game::render()
 {
     this->window->clear();
 
-    // render objects
+    // render items
+    if (!this->states.empty())
+        this->states.top()->render();
 
     this->window->display();
 }
