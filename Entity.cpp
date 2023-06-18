@@ -13,20 +13,7 @@ void Entity::move(const float& dt, const float dx, const float dy)
     this->shape.move(dx * this->movementSpeed * dt, dy * this->movementSpeed * dt);
 }
 
-void Entity::update(const float& dt)
-{
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-        this->move(dt, -1.f, 0.f);
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-        this->move(dt, 1.f, 0.f);
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-        this->move(dt, 0.f, -1.f);
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-        this->move(dt, 0.f, 1.f);
-}
+void Entity::update(const float& dt) {}
 
 void Entity::render(sf::RenderTarget* target)
 {

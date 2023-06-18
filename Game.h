@@ -14,8 +14,11 @@ class Game
 
     std::stack<State*> states;
 
+    std::map<std::string, int> supportedKeys;
+
     // Initialization
     void initWindow();
+    void initKeys();
     void initStates();
 
  public:
