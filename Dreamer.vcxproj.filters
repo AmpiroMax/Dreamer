@@ -39,6 +39,9 @@
     <ClCompile Include="MainMenuState.cpp">
       <Filter>States</Filter>
     </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include=".clang-format" />
@@ -59,6 +62,9 @@
     </ClInclude>
     <ClInclude Include="MainMenuState.h">
       <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Файлы ресурсов</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
